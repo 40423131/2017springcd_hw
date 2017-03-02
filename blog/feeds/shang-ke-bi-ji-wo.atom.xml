@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/shang-ke-bi-ji-wo.atom.xml" rel="self"></link><id>./</id><updated>2016-09-02T12:00:00+08:00</updated><entry><title>40423131 上課筆記</title><link href="./40423131-shang-ke-bi-ji.html" rel="alternate"></link><published>2016-09-02T12:00:00+08:00</published><updated>2016-09-02T12:00:00+08:00</updated><author><name>40423131</name></author><id>tag:,2016-09-02:./40423131-shang-ke-bi-ji.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;p&gt;9/22筆記&lt;/p&gt;
+
+&lt;p&gt;http://140.130.17.17/public/2016fall/ &lt;/p&gt;
+
+&lt;p&gt;ana2016fall_08.7z&lt;/p&gt;
+
+&lt;p&gt;mini2016fall.7z&lt;/p&gt;
+
+&lt;p&gt;week 4 &lt;/p&gt;
+
+&lt;p&gt;文章翻譯 &lt;/p&gt;
+
+&lt;p&gt;1.radinsed半徑 2.diameter直徑 3.place放置 4.symmetrically對稱 5.lnitially開始 6.oriented定位 7.axes軸 8.indicated表示 9.respectively分別 10.parallel平行 11.extruding長出 12.automatically自動 13.coincident一模一樣 14.constraint約束 15.horizontal橫 16.perpendicular垂直 17.step圖(格式)&lt;/p&gt;
+
+&lt;p&gt;機械設計工程系主題教學:&lt;/p&gt;
+
+&lt;p&gt;主題教學課程: 計算機程式、網際內容管理、電腦輔助設計實習、協同產品設計實習&lt;/p&gt;
+
+&lt;p&gt;主題教學目的: 培養具創造力, 精通表達, 能積極融入協同產品設計流程的機械設計工程師.&lt;/p&gt;
+
+&lt;p&gt;創造力 = 自學力 + 程式力 + 想像力&lt;/p&gt;
+
+&lt;p&gt;表達 = oral, text, 2D, 3D, analytical, physical&lt;/p&gt;
+
+&lt;p&gt;協同產品設計 = computer, network, tools, project&lt;/p&gt;
+
+&lt;p&gt;工業 4.0 = 高度客製化 + 高度體貼&lt;/p&gt;
+
+&lt;p&gt;w5&lt;/p&gt;
+
+&lt;p&gt;錄影工具:&lt;/p&gt;
+
+&lt;p&gt;Ubuntu: kazam&lt;/p&gt;
+
+&lt;p&gt;Windows: ShareX&lt;/p&gt;
+
+&lt;p&gt;ffmpeg -i in.mp4 -vf subtitles=subtitle.srt out.mp4&lt;/p&gt;
+
+&lt;p&gt;1 00:00:00,000 --&gt; 00:00:20,000 字幕內容&lt;/p&gt;
+
+&lt;p&gt;2 00:00:20,000 --&gt; 00:00:29,000 字幕內容&lt;/p&gt;
+
+&lt;p&gt;3 00:00:29,000 --&gt; 00:00:33,450 字幕內容&lt;/p&gt;
+
+&lt;p&gt;W6&lt;/p&gt;
+
+&lt;p&gt;2016fallcadp_hw -&gt; gh-pages -&gt; reveal + blog -&gt; 2016fallcadp_agX (gh-pages, reveal + blog) -&gt; submodule&lt;/p&gt;
+
+&lt;p&gt;Solvespace -&gt; part model -&gt; assembly -&gt; linkages&lt;/p&gt;
+
+&lt;p&gt;OnShape -&gt; part model -&gt; assembly -&gt; linkages&lt;/p&gt;</summary><category term="使用導引"></category></entry></feed>
