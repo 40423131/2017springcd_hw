@@ -17,8 +17,9 @@
 <v t="amd.20160106095324.1" a="E"><vh>@path ./../</vh>
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button pelican-blog</vh></v>
+<v t="leo.20161124144859.1"><vh>@button https server</vh></v>
 </v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
 <v t="leo.20151213230957.1"><vh>文章 Date 設定</vh></v>
@@ -54,24 +55,14 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 所寫的網誌文章</vh>
 <v t="amd.20160727114506.1" a="E"><vh>201609</vh>
-<v t="leo.20161006234714.1"><vh>@edit 20161006.md</vh></v>
-<v t="leo.20161010174437.1"><vh>@edit 20160929.md</vh></v>
-<v t="leo.20161103161113.1"><vh>@edit 20160959.md</vh></v>
-<v t="leo.20161229154547.1"><vh>@edit 20161117.md</vh></v>
-<v t="leo.20161229161734.1"><vh>@edit 20161124.md</vh></v>
-<v t="leo.20161229200057.1"><vh>@edit 20161201.md</vh></v>
-<v t="leo.20161229200110.1"><vh>@edit 20161215.md</vh></v>
-<v t="leo.20161229200117.1"><vh>@edit 20161220.md</vh></v>
-<v t="leo.20170105182012.1"><vh>@edit 20161227.md</vh></v>
-<v t="leo.20170105165305.1"><vh>@edit 20170105.md</vh></v>
-<v t="leo.20170106163305.1"><vh>@edit 20170112.md</vh></v>
-</v>
-<v t="leo.20170302112524.1" a="E"><vh>2017</vh>
-<v t="leo.20170302112524.2"><vh>@edit 20170302.md</vh></v>
+<v t="leo.20170112145109.1"><vh>@edit 20160302.md</vh></v>
+<v t="leo.20170316110547.1"><vh>@edit 20160306.md</vh></v>
+<v t="leo.20170316110549.1"><vh>@edit 20160310.md</vh></v>
+<v t="leo.20170316111345.1"><vh>@edit 20160316.md</vh></v>
 </v>
 </v>
 </v>
-<v t="amd.20160106094754.1" a="E"><vh>@path ./../content/pages</vh>
+<v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
 <v t="amd.20160106094829.1" a="E"><vh>yen 所寫的 pages 文章</vh>
 <v t="amd.20160106094844.1"><vh>@edit pages_1.md</vh></v>
 </v>
@@ -219,6 +210,27 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
-<t tx="leo.20170302112524.1"></t>
+<t tx="leo.20161124144859.1">@language python
+import os
+import subprocess
+import threading
+import http.server, ssl
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    server_address = ('localhost', 8443)
+    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print("8443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()</t>
 </tnodes>
 </leo_file>
