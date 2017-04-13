@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 電腦輔助設計實習 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/hw.atom.xml" rel="self"></link><id>./</id><updated>2017-04-06T12:08:00+08:00</updated><entry><title>協同產品設計實習 W6作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017spring 協同產品設計實習 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/hw.atom.xml" rel="self"></link><id>./</id><updated>2017-04-06T12:08:00+08:00</updated><entry><title>協同產品設計實習 W6作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;h1&gt;多連桿轉入 V-rep 進行運動模擬&lt;/h1&gt;
 &lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/212585540" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W5作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html" rel="alternate"></link><published>2017-03-23T12:08:00+08:00</published><updated>2017-03-23T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-23:./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W7作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;h1&gt;本週點名、自評&lt;/h1&gt;
+&lt;h1&gt;期中前所有影片整合&lt;/h1&gt;
+&lt;p&gt;&lt;p&gt;多連桿運動路徑 &lt;/p&gt;
+&lt;p&gt;01 &lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/212469599" width="640" height="347" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/212469599"&gt;多連桿運動路徑01&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;02 &lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/212469626" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/212469626"&gt;多連桿運動路徑02&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;設定proxy &lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/212469649" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/212469649"&gt;2017-04-06_17-41-43&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;建立個人fossil新倉儲 &lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/212469656" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/212469656"&gt;建立個人fossil新倉儲&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;單連桿機構轉入 V-rep &lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/211790240" width="640" height="347" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/211790240"&gt;單連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;多連桿機構轉入 V-rep &lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/212585540" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W5作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html" rel="alternate"></link><published>2017-03-23T12:08:00+08:00</published><updated>2017-03-23T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-23:./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;h1&gt;Solcespace 單連桿轉入 V-rep 進行運動模擬&lt;/h1&gt;
 &lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/211790240" width="640" height="347" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href="https://vimeo.com/211790240"&gt;W5&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W4作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html" rel="alternate"></link><published>2017-03-16T12:08:00+08:00</published><updated>2017-03-16T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-16:./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-&lt;p&gt;&lt;p1&gt;使用fossil sql -R cd.更改建立倉儲&lt;/p1&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p2&gt;使用ipconfig指令查詢IP並打入proxy設定內&lt;/p2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p3&gt;更改fossil倉儲內自己的權限&lt;/p3&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p4&gt;建立wiki筆記補上每周進度&lt;/p4&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="./../data/40423132fossil.png"width="800"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://mde2a2.kmol.info/cdag3/wiki"&gt;分組的倉儲&lt;/a&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W3作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html" rel="alternate"></link><published>2017-03-10T12:08:00+08:00</published><updated>2017-03-10T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-10:./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/211790240"&gt;單連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W4作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html" rel="alternate"></link><published>2017-03-16T12:08:00+08:00</published><updated>2017-03-16T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-16:./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W3作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html" rel="alternate"></link><published>2017-03-10T12:08:00+08:00</published><updated>2017-03-10T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-10:./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;h1&gt;建立fossil新倉儲&lt;/h1&gt;
 &lt;p&gt;&lt;p&gt;fossil init test.fossil&lt;/p&gt;&lt;/p&gt;
