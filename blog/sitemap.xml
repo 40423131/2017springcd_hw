@@ -5,35 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2017-04-20T10:33:25-00:00</lastmod>
+<lastmod>2017-04-27T02:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2017-04-20T10:33:25-00:00</lastmod>
+<lastmod>2017-04-27T02:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2017-04-20T10:33:25-00:00</lastmod>
+<lastmod>2017-04-27T02:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2017-04-20T10:33:25-00:00</lastmod>
+<lastmod>2017-04-27T02:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./pages/about/</loc>
-<lastmod>2017-04-20T09:35:54+08:00</lastmod>
+<lastmod>2017-04-13T17:13:48+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./si-lian-gan-ji-gou-trace-pointcha-yan.html</loc>
+<lastmod>2017-04-20T12:08:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -46,14 +53,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</loc>
-<lastmod>2017-04-06T12:08:00+08:00</lastmod>
+<loc>./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html</loc>
+<lastmod>2017-04-13T12:08:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html</loc>
+<loc>./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</loc>
 <lastmod>2017-04-06T12:08:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -81,14 +88,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html</loc>
-<lastmod>2017-03-02T12:08:00+08:00</lastmod>
+<loc>./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html</loc>
+<lastmod>2017-03-06T12:08:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html</loc>
+<loc>./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html</loc>
 <lastmod>2017-03-02T12:08:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -193,15 +200,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./tag/shi-yong-dao-yin.html</loc>
-<lastmod>2017-03-02T12:00:00+08:06</lastmod>
+<loc>./tag/zuo-ye.html</loc>
+<lastmod>2017-04-20T12:08:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/zuo-ye.html</loc>
-<lastmod>2017-04-20T12:08:00+08:06</lastmod>
+<loc>./tag/shi-yong-dao-yin.html</loc>
+<lastmod>2017-03-02T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

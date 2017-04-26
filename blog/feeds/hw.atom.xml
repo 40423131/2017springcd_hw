@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2017spring 協同產品設計實習 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/hw.atom.xml" rel="self"></link><id>./</id><updated>2017-04-20T12:08:00+08:00</updated><entry><title>協同產品設計實習 W10作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w10zuo-ye.html" rel="alternate"></link><published>2017-04-20T12:08:00+08:00</published><updated>2017-04-20T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-20:./xie-tong-chan-pin-she-ji-shi-xi-w10zuo-ye.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017spring 協同產品設計實習 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/hw.atom.xml" rel="self"></link><id>./</id><updated>2017-04-20T12:08:00+08:00</updated><entry><title>四連桿機構Trace Point查驗</title><link href="./si-lian-gan-ji-gou-trace-pointcha-yan.html" rel="alternate"></link><published>2017-04-20T12:08:00+08:00</published><updated>2017-04-20T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-20:./si-lian-gan-ji-gou-trace-pointcha-yan.html</id><summary type="html">&lt;p&gt;四連桿機構協同 Trace Point 查驗&lt;/p&gt;
+
+
+&lt;p&gt;四連桿機構Trace Point查驗&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/214890735" width="640" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/214890735"&gt;虎尾科技大學 機械設計系 40423131 四連桿機構協同 Trace Point 查驗&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="./../2017w10/02.jpg"width="800" /&gt;&lt;/p&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
 &lt;/script&gt;
@@ -12,18 +21,24 @@ brython(1);
 }
 &lt;/script&gt;
 
-&lt;p&gt;&lt;!-- 以下實際利用  Brython 畫四連桿 trace point 路徑--&gt;
- &lt;canvas id="fourbar_40423131" width="600" height="400"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;!-- 以下實際利用  Brython 畫四連桿 trace point 路徑--&gt;
+
+&lt;canvas id="fourbar" width="600" height="1000"&gt;&lt;/canvas&gt;
+
+&lt;div id="container1"&gt;&lt;/div&gt;
+
 &lt;script type="text/python3"&gt;
 from browser import document as doc
 from browser import html
 import math
 # 準備繪圖畫布
-canvas = doc["fourbar_40423131"]
+canvas = doc["fourbar"]
+container1 = doc['container1']
 ctx = canvas.getContext("2d")
 
 fourbar_data = open("./../2017w10/midterm5.csv").read()
 fourbar_list = fourbar_data.splitlines()
+#container1 &lt;= fourbar_list[0]
 # 以下可以利用 ctx 物件進行畫圖
 # 先畫一條直線
 ctx.beginPath()
@@ -34,8 +49,8 @@ ctx.lineWidth = 1
 # 配合圖形位置進行座標轉換
 ctx.transform(1, 0, 0, -1, canvas.width/2+250, canvas.height/2+100)
 # 畫出 x 與 y 座標線
-# 各座標值放大 3 倍
-ratio = 3
+# 各座標值放大 8 倍
+ratio = 8
 ctx.moveTo(0, 0)
 ctx.lineTo(-30*ratio, 0)
 start_point = fourbar_list[0].split(",")
@@ -52,11 +67,43 @@ ctx.strokeStyle = "blue"
 # 實際執行畫線
 ctx.stroke()
 ctx.closePath()
-&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W6作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W10作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w10zuo-ye.html" rel="alternate"></link><published>2017-04-20T12:08:00+08:00</published><updated>2017-04-20T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-20:./xie-tong-chan-pin-she-ji-shi-xi-w10zuo-ye.html</id><summary type="html">&lt;p&gt;期中報告&lt;/p&gt;
 
-&lt;h1&gt;多連桿轉入 V-rep 進行運動模擬&lt;/h1&gt;
-&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/212585540" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W7作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;h2&gt;4.分組協同零件展示&lt;/h2&gt;
+&lt;p&gt;&lt;link href="./../2017w10/madeleine/src/css/Madeleine.css" rel="stylesheet"&gt;
+&lt;script src="./../2017w10/madeleine/src/stats.js"&gt;&lt;/script&gt;
+&lt;script src="./../2017w10/madeleine/src/detector.js"&gt;&lt;/script&gt;
+&lt;script src="./../2017w10/madeleine/src/three.min.js"&gt;&lt;/script&gt;
+&lt;script src="./../2017w10/madeleine/src/Madeleine.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;div id="target" class="madeleine"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+window.onload = function(){
+    var madeleine = new Madeleine({
+      target: 'target', // target div id
+      data: './../2017w10/666.stl', // data path
+      path: './../2017w10/madeleine/src/' // path to source directory from current html file
+    });
+}; 
+&lt;/script&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"
+&gt;&lt;/script&gt;
+
+&lt;script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/TrackballControls.js"
+&gt;&lt;/script&gt;
+
+&lt;script src="./../data/w9/loader.js"&gt;&lt;/script&gt;
+
+&lt;script src="./../data/w9/stl.js"&gt;&lt;/script&gt;
+
+&lt;div&gt;
+select stl file: &lt;input type="file" id="file" /&gt; or drop stl file
+&lt;/div&gt;
+
+&lt;div id="view"&gt;&lt;/div&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W7作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html" rel="alternate"></link><published>2017-04-13T12:08:00+08:00</published><updated>2017-04-13T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-13:./xie-tong-chan-pin-she-ji-shi-xi-w7zuo-ye.html</id><summary type="html">&lt;p&gt;期中前所有影片整合&lt;/p&gt;
+
 
 &lt;h1&gt;本週點名、自評&lt;/h1&gt;
 &lt;h1&gt;期中前所有影片整合&lt;/h1&gt;
@@ -89,11 +136,18 @@ ctx.closePath()
 
 &lt;iframe src="https://player.vimeo.com/video/212585540" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W5作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html" rel="alternate"></link><published>2017-03-23T12:08:00+08:00</published><updated>2017-03-23T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-23:./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W6作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html" rel="alternate"></link><published>2017-04-06T12:08:00+08:00</published><updated>2017-04-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-04-06:./xie-tong-chan-pin-she-ji-shi-xi-w6zuo-ye.html</id><summary type="html">&lt;p&gt;多連桿轉入 V-rep 進行運動模擬&lt;/p&gt;
+
+
+&lt;h1&gt;多連桿轉入 V-rep 進行運動模擬&lt;/h1&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/212585540" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/212585540"&gt;多連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W5作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html" rel="alternate"></link><published>2017-03-23T12:08:00+08:00</published><updated>2017-03-23T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-23:./xie-tong-chan-pin-she-ji-shi-xi-w5zuo-ye.html</id><summary type="html">&lt;p&gt;Solcespace 單連桿轉入 V-rep 進行運動模擬&lt;/p&gt;
+
 
 &lt;h1&gt;Solcespace 單連桿轉入 V-rep 進行運動模擬&lt;/h1&gt;
 &lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/211790240" width="640" height="347" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href="https://vimeo.com/211790240"&gt;單連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W4作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html" rel="alternate"></link><published>2017-03-16T12:08:00+08:00</published><updated>2017-03-16T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-16:./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/211790240"&gt;單連桿機構轉入 V-rep&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W4作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html" rel="alternate"></link><published>2017-03-16T12:08:00+08:00</published><updated>2017-03-16T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-16:./xie-tong-chan-pin-she-ji-shi-xi-w4zuo-ye.html</id><summary type="html">&lt;p&gt;建立fossil倉儲&lt;/p&gt;
+
 
 &lt;h1&gt;建立fossil新倉儲&lt;/h1&gt;
 &lt;p&gt;&lt;p&gt;fossil init test.fossil&lt;/p&gt;&lt;/p&gt;
@@ -103,23 +157,14 @@ ctx.closePath()
 &lt;h1&gt;Fossil SCM 與 Stunnel 啟動整合&lt;/h1&gt;
 &lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/212469656" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;a href="https://vimeo.com/212469656"&gt;建立個人fossil新倉儲&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;備註:影片裡Stunnel的start.bat，已經是覆蓋過的新start.bat&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W3作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html" rel="alternate"></link><published>2017-03-10T12:08:00+08:00</published><updated>2017-03-10T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-10:./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;備註:影片裡Stunnel的start.bat，已經是覆蓋過的新start.bat&lt;/p&gt;&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W3作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html" rel="alternate"></link><published>2017-03-10T12:08:00+08:00</published><updated>2017-03-10T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-10:./xie-tong-chan-pin-she-ji-shi-xi-w3zuo-ye.html</id><summary type="html">&lt;p&gt;小組翻譯影片&lt;/p&gt;
+
 
 &lt;h1&gt;小組翻譯影片&lt;/h1&gt;
 &lt;iframe src="https://player.vimeo.com/video/208468611" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;a href="https://vimeo.com/208468611"&gt;HyperWorks 14 - Novedades en armado y construcci&amp;oacute;n de modelos內建字幕&lt;/a&gt; from &lt;a href="https://vimeo.com/user46453244"&gt;40423118&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W1作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html" rel="alternate"></link><published>2017-03-02T12:08:00+08:00</published><updated>2017-03-02T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-02:./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/208468611"&gt;HyperWorks 14 - Novedades en armado y construcci&amp;oacute;n de modelos內建字幕&lt;/a&gt; from &lt;a href="https://vimeo.com/user46453244"&gt;40423118&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W2作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html" rel="alternate"></link><published>2017-03-06T12:08:00+08:00</published><updated>2017-03-06T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-06:./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html</id><summary type="html">&lt;p&gt;多連桿運動路徑&lt;/p&gt;
 
-&lt;h1&gt;繪製四連桿零件和架構&lt;/h1&gt;
-&lt;iframe src="https://player.vimeo.com/video/213048452" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href="https://vimeo.com/213048452"&gt;虎尾科技大學 機械設計系 40423131 連桿零件繪製&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe src="https://player.vimeo.com/video/213048466" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href="https://vimeo.com/213048466"&gt;虎尾科技大學 機械設計系 40423131 四連桿架構&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe src="./../2017w1/6666.html" width="800" height="600"&gt;&lt;/iframe&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W2作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html" rel="alternate"></link><published>2017-03-02T12:08:00+08:00</published><updated>2017-03-02T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-02:./xie-tong-chan-pin-she-ji-shi-xi-w2zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;h1&gt;多連桿運動路徑&lt;/h1&gt;
 &lt;iframe src="https://player.vimeo.com/video/212469599" width="640" height="347" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -169,7 +214,19 @@ ctx.closePath()
 
 &lt;p&gt;&lt;a href="https://vimeo.com/211783139"&gt;bar08&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;iframe src="./../2017w2/bar08.html" width="640" height="360"&gt;&lt;/iframe&gt;</summary><category term="作業"></category></entry><entry><title>40423131 W18 電腦輔助設計實習課程總結</title><link href="./40423131-w18-dian-nao-fu-zhu-she-ji-shi-xi-ke-cheng-zong-jie.html" rel="alternate"></link><published>2017-01-12T12:08:00+08:00</published><updated>2017-01-12T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-01-12:./40423131-w18-dian-nao-fu-zhu-she-ji-shi-xi-ke-cheng-zong-jie.html</id><summary type="html">&lt;p&gt;40423131 W18作業
+&lt;iframe src="./../2017w2/bar08.html" width="640" height="360"&gt;&lt;/iframe&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W1作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html" rel="alternate"></link><published>2017-03-02T12:08:00+08:00</published><updated>2017-03-02T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-03-02:./xie-tong-chan-pin-she-ji-shi-xi-w1zuo-ye.html</id><summary type="html">&lt;p&gt;個人作業簡報&lt;/p&gt;
+
+
+&lt;h1&gt;繪製四連桿零件和架構&lt;/h1&gt;
+&lt;iframe src="https://player.vimeo.com/video/213048452" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/213048452"&gt;虎尾科技大學 機械設計系 40423131 連桿零件繪製&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/213048466" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/213048466"&gt;虎尾科技大學 機械設計系 40423131 四連桿架構&lt;/a&gt; from &lt;a href="https://vimeo.com/user44207151"&gt;40423131&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe src="./../2017w1/6666.html" width="800" height="600"&gt;&lt;/iframe&gt;</summary><category term="作業"></category></entry><entry><title>40423131 W18 電腦輔助設計實習課程總結</title><link href="./40423131-w18-dian-nao-fu-zhu-she-ji-shi-xi-ke-cheng-zong-jie.html" rel="alternate"></link><published>2017-01-12T12:08:00+08:00</published><updated>2017-01-12T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-01-12:./40423131-w18-dian-nao-fu-zhu-she-ji-shi-xi-ke-cheng-zong-jie.html</id><summary type="html">&lt;p&gt;40423131 W18作業
 &lt;/p&gt;
 &lt;h4&gt;個人操作影片圖片&lt;/h4&gt;
 &lt;h3&gt;W13 【Solvespace】四連桿與多連桿運動模擬&lt;/h3&gt;
