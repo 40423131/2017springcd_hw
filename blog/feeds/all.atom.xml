@@ -163,11 +163,10 @@ ctx.strokeStyle = "white"
 ctx.moveTo(0,600)
 ctx.lineTo(800,600)
 ctx.stroke()
-&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W13作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w13zuo-ye.html" rel="alternate"></link><published>2017-05-11T12:08:00+08:00</published><updated>2017-05-11T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-05-11:./xie-tong-chan-pin-she-ji-shi-xi-w13zuo-ye.html</id><summary type="html">&lt;ol&gt;
-&lt;li&gt;利用Brython繪製正齒輪嚙合 (20t-7t-13t)的圖&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W13作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w13zuo-ye.html" rel="alternate"></link><published>2017-05-11T12:16:00+08:00</published><updated>2017-05-11T12:16:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-05-11:./xie-tong-chan-pin-she-ji-shi-xi-w13zuo-ye.html</id><summary type="html">&lt;p&gt;Brython繪製齒輪組嚙合&lt;/p&gt;
 
 
+&lt;p&gt;利用漸開線原理, 以 Brython 繪製齒輪組嚙合&lt;/p&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script src="../data/Brython-3.3.1/brython.js"&gt;&lt;/script&gt;
@@ -185,10 +184,11 @@ brython({debug:1, pythonpath:['./../data/py']});
 
 &lt;!-- 以下實際利用  Brython 繪圖--&gt;
 
-&lt;canvas id='gear3' width='800' height='400'&gt;&lt;/canvas&gt;
+&lt;canvas id="onegear" width="800" height="600"&gt;&lt;/canvas&gt;
+
+&lt;div id="onegear_div" width="800" height="20"&gt;&lt;/div&gt;
 
 &lt;script type="text/python3"&gt;
-# 導入 browser 模組中的 document, 並設為 doc 變數
 from browser import document as doc
 import math
 # deg 為角度轉為徑度的轉換因子
@@ -264,7 +264,6 @@ class Spur(object):
                 xpt=r*math.sin(alpha-ang)
                 ypt=r*math.cos(alpha-ang)
                 xd=rd*math.sin(-ang)
-
                 yd=rd*math.cos(-ang)
                 # i=0 時, 繪線起點由齒根圓上的點, 作為起點
                 if(i==0):
@@ -310,87 +309,78 @@ class Spur(object):
             # lfx 為齒頂圓上的左側 x 座標, lfy 則為 y 座標
             # 下列為齒頂圓上用來近似圓弧的直線
             self.create_line(lfx,lfy,rfx,rfy,fill=color)
-
-# 準備在 id="gear3" 的 canvas 中繪圖
-canvas = doc["gear3"]
+canvas = doc['onegear']
 ctx = canvas.getContext("2d")
+'''
+x = (canvas.width)/2
+y = (canvas.height)/2
+r = 0.8*(canvas.height/2)
+'''
+x = (canvas.width)/2
+y = (canvas.height)/2
+canvas_size = canvas.width*0.4
+# 齒數
+#n = 20
+n20 = 20
+n11 = 11
+n13 = 13
 
-# 模數決定齒的尺寸大小, 囓合齒輪組必須有相同的模數與壓力角
-# 壓力角 pa 單位為角度
-pa = 1
-# 第1齒輪齒數
-n_g1 = 20
-# 第2齒輪齒數
-n_g2 = 7
-# 第3齒輪齒數
-n_g3 = 13
-# m 為模數, 根據畫布的寬度, 計算適合的模數大小
-m = (0.8*canvas.width)/(n_g1+n_g2+n_g3)
-# 根據模數 m, 計算各齒輪的節圓半徑
-rp_g1 = m*n_g1/2
-rp_g2 = m*n_g2/2
-rp_g3 = m*n_g3/2
-#單一正齒輪繪圖呼叫格式 Spur(ctx).Gear(x, y, r, n, pa, "red")
-# 開始繪製囓合齒輪輪廓
-# 繪圖第1齒輪的圓心座標, 因為希望繪圖佔去 canvas.width 的 80%, 所以兩邊各預留 10% 距離
-x_g1 = canvas.width*0.1+rp_g1
-# y 方向繪圖區域上方預留 canvas.height 的 20%
-y_g1 = canvas.height*0.2+rp_g1
-# 第2齒輪的圓心座標, 假設排列成水平, 表示各齒輪圓心 y 座標相同
-x_g2 = x_g1 + rp_g1 + rp_g2
-y_g2 = y_g1
-# 第3齒輪的圓心座標
-x_g3 = x_g1 + rp_g1 + 2*rp_g2 + rp_g3
-y_g3 = y_g1
+r20 = canvas_size*n20/(n20+n11+n13)
+r11 = canvas_size*n11/(n20+n11+n13)
+r13 = canvas_size*n13/(n20+n11+n13)
 
-# 將第1齒輪順時鐘轉 90 度, 也就是 math.pi/2
-# 使用 ctx.save() 與 ctx.restore() 以確保各齒輪以相對座標進行旋轉繪圖
+x13 = x
+x11 = x + (r11+r13)
+x20 = x - (r20+r13)
+
+# 壓力角
+pa = 20
+'''
 ctx.save()
-# translate to the origin of second gear
-ctx.translate(x_g1, y_g1)
-# rotate to engage
-ctx.rotate(math.pi/2)
-# put it back
-ctx.translate(-x_g1, -y_g1)
-# 繪製第一個齒輪輪廓
-Spur(ctx).Gear(x_g1, y_g1, rp_g1, n_g1, pa, "black")
+ctx.translate( x20 , y )
+ctx.rotate(90*deg)
+ctx.translate( -x20 , -y )
+gear = Spur(ctx).Gear(x, y, r, n, pa, "blue")
+'''
+ctx.save()
+ctx.translate( x20 , y )
+ctx.rotate(90*deg)
+ctx.translate( -x20 , -y )
+gear20 = Spur(ctx).Gear(x20, y, r20, n20, pa, "blue")
 ctx.restore()
 
-# 將第2齒輪逆時鐘轉 90 度之後, 再多轉一齒, 以便與第1齒輪進行囓合
 ctx.save()
-# translate to the origin of second gear
-ctx.translate(x_g2, y_g2)
-# rotate to engage
-ctx.rotate(-math.pi/2-math.pi/n_g2)
-# put it back
-ctx.translate(-x_g2, -y_g2)
-Spur(ctx).Gear(x_g2, y_g2, rp_g2, n_g2, pa, "blue")
+ctx.translate( x13 , y )
+ctx.rotate(-90*deg-math.pi/n13)
+ctx.translate( -x13 , -y )
+gear13 = Spur(ctx).Gear(x13, y, r13, n13, pa, "blue")
 ctx.restore()
 
-#
 ctx.save()
-# translate to the origin of second gear
-ctx.translate(x_g3, y_g3)
-# rotate to engage
-ctx.rotate(-math.pi/2-math.pi/n_g3)
-# put it back
-ctx.translate(-x_g3, -y_g3)
-Spur(ctx).Gear(x_g3, y_g3, rp_g3, n_g3, pa, "black")
+ctx.translate( x11 , y )
+ctx.rotate(-90*deg-math.pi/n11)
+ctx.translate( -x11 , -y )
+gear11 = Spur(ctx).Gear(x11, y, r11, n11, pa, "blue")
 ctx.restore()
+
+div = doc["onegear_div"]
+div &lt;= str(canvas.width) + "X" + str(canvas.height)
 &lt;/script&gt;
+
+&lt;!-- 以下處理 Cango Spur Gear --&gt;
 
 &lt;!-- Cango 程式庫 --&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /Cango-9v05-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /CangoAxes-2v09.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /CangoAnimation-5v00.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /gearUtils-05.js"&gt;&lt;/script&gt;
 
 &lt;canvas id='cango_gear' width='800' height='750'&gt;&lt;/canvas&gt;
@@ -502,8 +492,10 @@ def draw():
     cgo.render(gear1, {'x':cx+pr*2*0.5-pr/2, 'y':cy, 'scl':0.5, 'degs':0})
 
 set_interval(draw, 2)
-&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W12作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w12zuo-ye.html" rel="alternate"></link><published>2017-05-05T12:08:00+08:00</published><updated>2017-05-05T12:08:00+08:00</updated><author><name>40423131</name></author><id>tag:,2017-05-05:./xie-tong-chan-pin-she-ji-shi-xi-w12zuo-ye.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;/script&gt;</summary><category term="作業"></category></entry><entry><title>協同產品設計實習 W12作業</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-w12zuo-ye.html" rel="alternate"></link><published>2017-05-04T12:16:00+08:00</published><updated>2017-05-04T12:16:00+08:00</updated><author><name>404231131</name></author><id>tag:,2017-05-04:./xie-tong-chan-pin-she-ji-shi-xi-w12zuo-ye.html</id><summary type="html">&lt;p&gt;單一 2D 正齒輪繪圖到齒輪組嚙合&lt;/p&gt;
 
+
+&lt;p&gt;利用漸開線原理, 以 Brython 繪製單一正齒輪廓:&lt;/p&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script src="../data/Brython-3.3.1/brython.js"&gt;&lt;/script&gt;
@@ -662,22 +654,34 @@ data1 = open("./../data/w11/2a0504.txt", encoding="utf-8").read()
 count = 0
 count1 = 0
 # 去掉前面兩列
+student = data.split("\n")[2:]
+student1 = data1.split("\n")[2:]
+for i in range(len(student)):
+    each = student[i].split("\t")
+    if each[1] != "出席":
+        count = count + 1
+for i in range(len(student1)):
+    each1 = student1[i].split("\t")
+    if each1[1] != "present":
+        count1 = count1 + 1
+div = doc["onegear_div"]
+div &lt;= "2b: " +  str(count) + "/" + str(len(student)) + "|" + "2a: " +  str(count1) + "/" + str(len(student1))
 &lt;/script&gt;
 
 &lt;!-- 以下處理 Cango Spur Gear --&gt;
 
 &lt;!-- Cango 程式庫 --&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /Cango-9v05-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /CangoAxes-2v09.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /CangoAnimation-5v00.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="./../data/w12/cango
+&lt;script type="text/javascript" src="./../data/w11/cango
 /gearUtils-05.js"&gt;&lt;/script&gt;
 
 &lt;canvas id='cango_gear' width='800' height='750'&gt;&lt;/canvas&gt;
